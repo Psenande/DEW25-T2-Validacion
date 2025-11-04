@@ -38,10 +38,13 @@
         function checkPasswords() {
             if (pass1Input.value === pass2Input.value) {
                 pass2Input.setCustomValidity('');
+                passErrorSpan.textContent = '';
             } else {
                 errorText = "Las contraseñas no coinciden.";
                 pass2Input.setCustomValidity(errorText);
+                passErrorSpan.textContent = errorText;
             }
+
         }
 
         pass1Input.addEventListener('change', checkPasswords);
